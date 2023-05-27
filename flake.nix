@@ -30,7 +30,8 @@
         };
       };
     in {
-      devShell = pkgs.mkShell {
+      devShells.default = pkgs.mkShell {
+      # devShells = pkgs.mkShell {
         packages = let
           toolkitShell = with pkgs; [
             #/> Shell <\#
