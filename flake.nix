@@ -45,7 +45,8 @@
             rust-script
             direnv
             taplo
-
+            jql
+            
             #/> Test <\#
             hello
           ];
