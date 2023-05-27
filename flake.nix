@@ -44,6 +44,7 @@
             bat
             rust-script
             direnv
+            taplo
 
             #/> Test <\#
             hello

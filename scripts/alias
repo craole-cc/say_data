@@ -1,0 +1,13 @@
+#!/bin/sh
+
+config_toml="$1"
+
+# Parse TOML and set aliases
+parse_toml() {
+    # Parse TOML and set aliases using the desired logic
+    # Here's a basic example using `toml-cli` (requires toml-cli to be installed)
+    toml "$1" | awk -F' = ' '{print "alias "$1"="$2}'
+}
+
+# Source the aliases into the current shell
+eval "$(parse_toml "$config_toml")"
