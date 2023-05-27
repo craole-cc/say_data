@@ -1,22 +1,9 @@
 #!/bin/sh
 
-# Check if flake_config environment variable is set
-if [ -z "$flake_config" ]; then
-    # If not set, check if TOML file path is provided as argument
-    if [ -z "$1" ]; then
-        echo "Please provide the TOML file path as an argument or set the 'flake_config' environment variable."
-        exit 1
-    fi
-    flake_config="$1"
-fi
-
-# Parse TOML and set aliases
-parse_toml() {
-    # Use taplo to parse TOML and set aliases
-    # Install taplo using cargo:
-    # cargo install taplo-cli
-    taplo get "$flake_config" --json | jq -r 'to_entries[] | "alias \(.key)=\(.value)"'
-}
-
-# Source the aliases into the current shell
-eval "$(parse_toml)"
+while [ "$#" -ge 1 ]; do
+    case "$1" in 
+    -f|--file) [ -f "$2" ] && file="${2:-$flake_config}" ;;
+    -t|--table) $2 ;;
+    
+shift
+done

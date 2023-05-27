@@ -18,7 +18,7 @@
       overlays = [
         (import rust-overlay)
         (self: super: {
-          rustToolchain = super.rust-bin.fromRustupToolchainFile ./Config.toml;
+          rustToolchain = super.rust-bin.fromRustupToolchainFile ./config/flake.toml;
           # rustToolchain = super.rust-bin.fromRustupToolchainFile ./rust-toolchain;
         })
       ];
@@ -38,7 +38,12 @@
             gnome.gnome-keyring
             gnome.libgnome-keyring
 
+            #/> Test <\#
+            hello
+          ];
+          toolkitShell = with pkgs; [
             #/> Shell <\#
+            shfmt
             exa
             ripgrep
             bat
@@ -46,9 +51,6 @@
             direnv
             taplo
             jql
-            
-            #/> Test <\#
-            hello
           ];
           toolkitRust = with pkgs; [
             rustToolchain
