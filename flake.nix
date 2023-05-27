@@ -33,16 +33,20 @@
       devShell = pkgs.mkShell {
         packages = let
           toolkitGeneral = with pkgs; [
-            #/> Tools <\#
+            #/> Authentication <\#
+            gnome.seahorse
+            gnome.gnome-keyring
+            gnome.libgnome-keyring
+
+            #/> Shell <\#
             exa
             ripgrep
             bat
             rust-script
-            hello
             direnv
-            # gnome.seahorse
-            # gnome.gnome-keyring
-            # gnome.libgnome-keyring
+
+            #/> Test <\#
+            hello
           ];
           toolkitRust = with pkgs; [
             rustToolchain
@@ -53,11 +57,15 @@
             cargo-generate
           ];
           toolkitData = with pkgs; [
-            #/> Data <\#
+            #/> Collection & Storage <\#
             postgresql_15
             sqlx-cli
-            grafana
             surrealdb
+
+            #/> Preparation & Transformation <\#
+
+            #/> Visualization <\#
+            grafana
             # jupyter
             # evcxr
           ];
@@ -105,7 +113,7 @@
           };
         in [
           toolkitGeneral
-          # toolkitRust
+          toolkitRust
           toolkitData
           toolkitVSCode
         ];
