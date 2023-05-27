@@ -42,6 +42,7 @@
             direnv
             taplo
             jql
+            tokei
             nushell
             nu_scripts
           ];
