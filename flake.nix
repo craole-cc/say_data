@@ -78,17 +78,16 @@
               #/> Toml
               tamasfe.even-better-toml
               eamodio.gitlens
-              vscode-icons-team.vscode-icons
 
               #/> Data
               mechatroner.rainbow-csv
               grapecity.gc-excelviewer
-              cweijan.vscode-database-client2
-              ms-toolsai.jupyter
+              # cweijan.vscode-database-client2
+              # ms-toolsai.jupyter
 
               #/> AI
-              genieai.chatgpt-vscode
-              chris-hayes.chatgpt-reborn
+              # genieai.chatgpt-vscode
+              # chris-hayes.chatgpt-reborn
 
               #/> VSC
               github.codespaces
@@ -99,10 +98,11 @@
               timonwong.shellcheck
 
               #/> Theming
+              vscode-icons-team.vscode-icons
               oderwat.indent-rainbow
-              kamikillerto.vscode-colorize
               ibm.output-colorizer
               gruntfuggly.todo-tree
+              # kamikillerto.vscode-colorize
               # vscodevim.vim
             ];
             # toolkitExtra = with pkgs; [
