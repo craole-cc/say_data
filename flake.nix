@@ -120,7 +120,7 @@
           toolkitRust
           toolkitData
           toolkitVSCode
-          toolkitExtra
+          # toolkitExtra
         ];
 
         inputsFrom = [];
