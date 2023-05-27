@@ -1,0 +1,10 @@
+
+[alias]
+b = "build"
+c = "check"
+t = "test"
+r = "run"
+w = "watch"
+rr = "run --release"
+rq = "run --quiet"
+wr = "watch --quiet --clear --exec \"run --quiet --\""

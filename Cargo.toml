@@ -18,24 +18,3 @@ toml = "0.7.3"
 # polars = { version = "0.28.0", features = ["lazy", "describe"] }
 # chrono = "0.4.24"
 # sysinfo = "0.28.4"
-
-[toolchain]
-# profile = "minimal"
-channel = "nightly" #"nightly-2023-03-30"
-components = [
-  "rustc",
-  "cargo",
-  "rustfmt",
-  "rust-analyzer",
-  "rust-src",
-  "clippy",
-  # "miri",
-  # "rustc-dev",
-  "llvm-tools-preview",
-]
-targets = [
-  "wasm32-unknown-unknown",
-  # "x86_64-unknown-linux-musl",
-  # "x86_64-unknown-linux-gnu",
-  # "aarch64-unknown-linux-musl",
-]

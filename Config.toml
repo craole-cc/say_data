@@ -1,3 +1,6 @@
+[flake]
+name = "say_data"
+
 [toolchain]
 # profile = "minimal"
 channel = "nightly" #"nightly-2023-03-30"
@@ -46,3 +49,15 @@ SOURCE = "https://mysqlcode.com/wp-content/uploads/2023/01/world.zip"
 DB_URL = "postgres://$PGUSER@$PGHOST:$PGPORT/bookstore"
 DB_URL_PRJ1 = "postgres://$PGUSER@$PGHOST:$PGPORT/$PRJ1_DB"
 DB_URL_PRJ2 = "postgres://$PGUSER@$PGHOST:$PGPORT/$PRJ2_DB"
+
+[alias]
+b = "build"
+c = "check"
+t = "test"
+r = "run"
+w = "watch"
+rr = "run --release"
+rq = "run --quiet"
+wr = "watch --quiet --clear --exec \"run --quiet --\""
+recursive_example = "rr --example recursions"
+space_example = ["run", "--release", "--", "\"command list\""]
