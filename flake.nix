@@ -106,7 +106,7 @@
           toolkitGeneral
           # toolkitRust
           # toolkitData
-          # toolkitVSCode
+          toolkitVSCode
           # vscodeWithExtensions
           # devInputs
         ];
