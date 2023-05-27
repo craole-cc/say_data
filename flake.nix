@@ -39,6 +39,7 @@
             bat
             rust-script
             hello
+            direnv
             # gnome.seahorse
             # gnome.gnome-keyring
             # gnome.libgnome-keyring
@@ -60,8 +61,8 @@
             # jupyter
             # evcxr
           ];
-          vscodeWithExtensions = pkgs.vscode-with-extensions.override {
-            toolkitVSCode = with pkgs.vscode-extensions; [
+          toolkitVSCode = pkgs.vscode-with-extensions.override {
+            vscodeExtensions = with pkgs.vscode-extensions; [
               #/> Nix
               bbenoist.nix
               kamadorueda.alejandra
@@ -105,10 +106,8 @@
         in [
           toolkitGeneral
           # toolkitRust
-          # toolkitData
+          toolkitData
           toolkitVSCode
-          # vscodeWithExtensions
-          # devInputs
         ];
 
         inputsFrom = [];
