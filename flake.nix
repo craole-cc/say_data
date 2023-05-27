@@ -57,7 +57,7 @@
             postgresql_15
             sqlx-cli
             grafana
-            # surrealdb
+            surrealdb
             # jupyter
             # evcxr
           ];
