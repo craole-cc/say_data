@@ -65,8 +65,8 @@
 
             #/> Visualization <\#
             grafana
-            # jupyter
-            # evcxr
+            jupyter
+            evcxr
           ];
           toolkitVSCode = pkgs.vscode-with-extensions.override {
             vscodeExtensions = with pkgs.vscode-extensions; [
@@ -87,7 +87,7 @@
               mechatroner.rainbow-csv
               grapecity.gc-excelviewer
               # cweijan.vscode-database-client2
-              # ms-toolsai.jupyter
+              ms-toolsai.jupyter
 
               #/> AI
               # genieai.chatgpt-vscode
