@@ -105,15 +105,15 @@
               gruntfuggly.todo-tree
               # vscodevim.vim
             ];
-            toolkitExtra = with pkgs; [
-              #/> Authentication <\#
-              gnome.seahorse
-              gnome.gnome-keyring
-              gnome.libgnome-keyring
+            # toolkitExtra = with pkgs; [
+            #   #/> Authentication <\#
+            #   gnome.seahorse
+            #   gnome.gnome-keyring
+            #   gnome.libgnome-keyring
 
-              #/> Test <\#
-              hello
-            ];
+            #   #/> Test <\#
+            #   hello
+            # ];
           };
         in [
           toolkitShell
