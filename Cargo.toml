@@ -15,6 +15,6 @@ users = "0.11.0"
 toml = "0.7.3"
 # walkdir = "2.3.3"
 # prettytable = "0.10.0"
-# polars = { version = "0.28.0", features = ["lazy", "describe", "sql"] }
+polars = { version = "0.28.0", features = ["lazy", "describe", "sql"] }
 # chrono = "0.4.24"
 # sysinfo = "0.28.4"
