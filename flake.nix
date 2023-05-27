@@ -42,6 +42,8 @@
             direnv
             taplo
             jql
+            nushell
+            nu_scripts
           ];
           toolkitRust = with pkgs; [
             rustToolchain
