@@ -32,15 +32,6 @@
     in {
       devShell = pkgs.mkShell {
         packages = let
-          toolkitGeneral = with pkgs; [
-            #/> Authentication <\#
-            gnome.seahorse
-            gnome.gnome-keyring
-            gnome.libgnome-keyring
-
-            #/> Test <\#
-            hello
-          ];
           toolkitShell = with pkgs; [
             #/> Shell <\#
             shfmt
@@ -114,12 +105,22 @@
               gruntfuggly.todo-tree
               # vscodevim.vim
             ];
+            toolkitExtra = with pkgs; [
+              #/> Authentication <\#
+              gnome.seahorse
+              gnome.gnome-keyring
+              gnome.libgnome-keyring
+
+              #/> Test <\#
+              hello
+            ];
           };
         in [
-          toolkitGeneral
+          toolkitShell
           toolkitRust
           toolkitData
           toolkitVSCode
+          toolkitExtra
         ];
 
         inputsFrom = [];

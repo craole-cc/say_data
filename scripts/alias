@@ -1,9 +1,12 @@
 #!/bin/sh
 
 while [ "$#" -ge 1 ]; do
-    case "$1" in 
-    -f|--file) [ -f "$2" ] && file="${2:-$flake_config}" ;;
-    -t|--table) $2 ;;
-    
-shift
+    case "$1" in
+    -f | --file | --toml) [ -f "$2" ] && toml="${2:-$flake_config}" ;;
+    -t | --table) table="$2" ;;
+    esac
+    shift
 done
+
+echo "toml: $toml"
+echo "table: $table"
